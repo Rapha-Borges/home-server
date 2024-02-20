@@ -14,6 +14,7 @@ A quick way to setup my home server.
 - [Nextcloud](https://nextcloud.com/)
 - [Syncthing](https://syncthing.net/)
 - [Digestabot](https://github.com/chainguard-dev/digestabot)
+- [Netboot.xyz](https://netboot.xyz/)
 
 ## Truenas Scale
 
@@ -69,3 +70,7 @@ docker-compose up -d
 ## Digestabot
 
 To ensure the security of our server, we will use Digestabot to keep our images always updated. It is a GitHub Action that checks for outdated Docker images and sends a pull request to update them.
+
+## References
+
+- [TechnoTim](https://www.youtube.com/@TechnoTim)

@@ -78,6 +78,20 @@ services:
       - './data/syncthing:/config'
       - './files:/mnt/data'
 
+  netbootxyz:
+    container_name: netbootxyz
+    restart: always
+    image: ghcr.io/netbootxyz/netbootxyz:latest@sha256:9e37f3844ef348d0c17d1f8d111e63e1d7b6e98e4d14f25935e3f475b06c5994
+    ports:
+      - 3000:3000
+      - 69:69/udp
+    environment:
+      - PUID=1000 #current user
+      - PGID=1000 #current group
+      - TZ=Etc/UTC
+    volumes:
+      - ./data/netbootxyz:/config
+
   # shlinkio:
   #   image: shlinkio/shlink:stable
   #   container_name: shlink
