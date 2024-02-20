@@ -86,9 +86,9 @@ services:
       - 3000:3000
       - 69:69/udp
     environment:
-      - PUID=1000 #current user
-      - PGID=1000 #current group
-      - TZ=Etc/UTC
+      PUID: $PUID
+      PGID: $PGID
+      TZ: ${TZ}
     volumes:
       - ./data/netbootxyz:/config
 
