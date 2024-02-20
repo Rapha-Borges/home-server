@@ -1,0 +1,24 @@
+name: Image digest update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # At the end of every day
+    - cron: "0 0 * * *"
+
+jobs:
+  image-update:
+    name: Image digest update
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+
+    steps:
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+
+    - uses: Rapha-Borges/digestabot@2d21b844dda5550f4f2bc4b200a87008c59baa25
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
