@@ -1,0 +1,114 @@
+version: "3.9"
+services:
+  pi-hole:
+    container_name: pi-hole
+    restart: always
+    image: pihole/pihole:latest@sha256:164d64d2299bcb6721d36da4eace4dc2dbc97caf235d8784d39a34e3c3a5f75c
+    ports:
+      - "8053:53/tcp"
+      - "8053:53/udp"
+      - "8067:67/udp"
+      - "8080:80"
+      - "8443:443"
+    environment:
+      TZ: ${TZ}
+      WEBPASSWORD: ${WEBPASSWORD}
+      # PROXY_LOCATION: ${PROXY_LOCATION}
+      # VIRTUAL_HOST: ${VIRTUAL_HOST}
+    volumes:
+      - './data/etc-pihole/:/etc/pihole/'
+      - './data/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+
+  homeassistant:
+    container_name: homeassistant
+    restart: unless-stopped
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:05b068ca39334a7e86500416839f11a541f0fa16f8722133f5dc123971da996e
+    ports:
+      - "8123:8123"
+    volumes:
+      - './data/homeassistant:/config'
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: ${TZ}
+    network_mode: host
+  
+  uptime-kuma:
+    container_name: uptime-kuma
+    restart: always
+    image: louislam/uptime-kuma:latest@sha256:04c327971da4d20a6f83619f2a2c0a2545e92f1930349c04dea59e247da493ff
+    ports:
+      - "3001:3001"
+    volumes:
+      - './data/uptime-kuma:/app/data'
+
+  myspeed:
+    container_name: myspeed
+    restart: always
+    image: germannewsmaker/myspeed:latest@sha256:bd10935fc175bb1e09dc40e6e464bd0860105b38a2898015f2f441e92828932a
+    ports:
+      - "5216:5216"
+    volumes:
+      - './data/myspeed:/app/data'
+
+  nextcloud:
+    container_name: nextcloud
+    restart: always
+    image: nextcloud:latest@sha256:0b04a2e2c14672a2fe56ca668a633ed8fc9d2d882df83fdfc6114773f4713a74
+    ports:
+      - "10081:80"
+      - "10443:443"
+    volumes:
+      - './data/nextcloud:/var/www/html'
+
+  syncthing:
+    container_name: syncthing
+    restart: always
+    image: linuxserver/syncthing:latest@sha256:318336e48804935c593bc30f69cade88c4cab2711aad11f7477822817fda6b18
+    ports:
+      - "8384:8384"
+      - "22000:22000"
+      - "22000:22000/udp"
+      - "21027:21027/udp"
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: ${TZ}
+    volumes:
+      - './data/syncthing:/config'
+      - './files:/mnt/data'
+
+  # shlinkio:
+  #   image: shlinkio/shlink:stable
+  #   container_name: shlink
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   ports:
+  #     - "8090:8080"
+
+  # unbound:
+  #   container_name: unbound
+  #   restart: always
+  #   image: mvance/unbound:latest@sha256:0bab19fde2ac5ae7432229ee7d13d0774b5aa4a717d619d6c27efee23df3f77a
+  #   ports:
+  #     - "53:53/tcp"
+  #     - "53:53/udp"
+  #   environment:
+  #     TZ: ${TZ}
+  #   volumes:
+  #     - './data/unbound:/opt/unbound/etc/unbound'
+
+  # wireguard:
+  #   container_name: wireguard
+  #   restart: always
+  #   image: linuxserver/wireguard:latest@sha256:c6a04406c370722b09c6622d9b2f9877e778efcd32a350b08f0755b544c6fc07
+  #   cap_add:
+  #     - NET_ADMIN
+  #     - SYS_MODULE
+  #   environment:
+  #     PUID: $PUID
+  #     PGID: $PGID
+  #     TZ: ${TZ}
+  #   volumes:
+  #     - './data/wireguard:/config'
+  #     - '/lib/modules:/lib/modules:ro'

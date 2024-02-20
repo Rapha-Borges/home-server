@@ -1,0 +1,72 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Network:
+    - Pi-Hole1:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL}}"
+        description: quasar
+        widget:
+            type: pihole
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
+
+    - Uptime Kuma:
+        icon: uptime-kuma.svg
+        href: "{{HOMEPAGE_VAR_UPTIME_KUMA_URL}}"
+        description: internal
+        widget:
+            type: uptimekuma
+            url: "{{HOMEPAGE_VAR_UPTIME_KUMA_URL}}"
+            slug: home
+            key: "{{HOMEPAGE_VAR_UPTIME_KUMA_API_KEY}}"
+    - Uptime Robot:
+        icon: https://play-lh.googleusercontent.com/cUrv0t00FYQ1GKLuOTvv8qjo1lSDjqZC16IOp3Fb6ijew6Br5m4o16HhDp0GBu_Bw8Y=w240-h480-rw
+        href: https://uptimerobot.com/dashboard
+        description: external
+        widget:
+            type: uptimerobot
+            url: https://api.uptimerobot.com
+            key: "{{HOMEPAGE_VAR_UPTIME_ROBOT_API_KEY}}"
+
+    - TrueNAS:
+        icon: truenas.svg
+        href: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+        description: scale
+        widget:
+            type: truenas
+            url: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+            key: "{{HOMEPAGE_VAR_TRUENAS_API_KEY}}"
+
+    - Plex:
+        icon: plex.svg
+        href: "{{HOMEPAGE_VAR_PLEX_URL}}"
+        description: media server
+        widget:
+            type: plex
+            url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+            key: "{{HOMEPAGE_VAR_PLEX_API_TOKEN}}"
+
+    - Home Assistant:
+        icon: home-assistant.svg
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+        description: home
+        widget:
+            type: homeassistant
+            url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+            key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+
+- Other:
+    - GitLab:
+        icon: gitlab.svg
+        href: https://gitlab.com
+        description: source code
+    - GitHub:
+        icon: github.svg
+        href: https://github.com
+        description: source code
+    - Shlink:
+        icon: https://shlink.io/images/shlink-logo-blue.svg
+        href: "{{HOMEPAGE_VAR_SHLINK_URL}}"
+        description: dashboard

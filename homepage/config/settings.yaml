@@ -1,0 +1,70 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: Home Server
+language: pt
+
+# base: http://host.local/homepage
+
+background:
+  image: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+  blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+  saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 50 # 0-100
+
+theme: dark
+color: slate
+
+useEqualHeights: true
+
+layout:
+  Hypervisor:
+    header: true
+    style: row
+    columns: 4
+  Containers:
+    header: true
+    style: row
+    columns: 4
+  DNS:
+    header: true
+    style: row
+    columns: 4
+  Network:
+    header: true
+    style: row
+    columns: 4
+  Remote Access:
+    header: true
+    style: row
+    columns: 4
+  Storage:
+    header: true
+    style: row
+    columns: 4
+  Media:
+    header: true
+    style: row
+    columns: 4
+  Home Automation:
+    header: true
+    style: row
+    columns: 4
+  Other:
+    header: true
+    style: row
+    columns: 4
+
+# cardBlur: sm # sm, "", md, etc... see https://tailwindcss.com/docs/backdrop-blur
+
+# favicon: https://www.google.com/favicon.ico
+
+# showStats: true
+
+# statusStyle: "basic"
+
+# providers:
+#   openweathermap: openweathermapapikey
+#   weatherapi: weatherapiapikey
