@@ -13,6 +13,7 @@ A quick way to setup my home server.
 - [MySpeed](https://myspeed.gnmyt.dev/)
 - [Nextcloud](https://nextcloud.com/)
 - [Syncthing](https://syncthing.net/)
+- [Digestabot](https://github.com/chainguard-dev/digestabot)
 
 ## Truenas Scale
 
@@ -65,3 +66,6 @@ After that, we can use the `docker compose up` command to start the services.
 docker-compose up -d
 ```
 
+## Digestabot
+
+To ensure the security of our server, we will use Digestabot to keep our images always updated. It is a GitHub Action that checks for outdated Docker images and sends a pull request to update them.
