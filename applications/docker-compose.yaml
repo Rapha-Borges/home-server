@@ -3,7 +3,7 @@ services:
   pi-hole:
     container_name: pi-hole
     restart: always
-    image: pihole/pihole:latest@sha256:164d64d2299bcb6721d36da4eace4dc2dbc97caf235d8784d39a34e3c3a5f75c
+    image: pihole/pihole:latest@sha256:8077053835c2d2449041adad0c272d6e5fea3df91c5dfc3dae2bd950999c3118
     ports:
       - "8053:53/tcp"
       - "8053:53/udp"
@@ -36,7 +36,7 @@ services:
   uptime-kuma:
     container_name: uptime-kuma
     restart: always
-    image: louislam/uptime-kuma:latest@sha256:04c327971da4d20a6f83619f2a2c0a2545e92f1930349c04dea59e247da493ff
+    image: louislam/uptime-kuma:latest@sha256:c326fd83d8da2d8fff3feb0e47433546139513bd823d9accc12977176b05b31f
     ports:
       - "3001:3001"
     volumes:
@@ -45,7 +45,7 @@ services:
   myspeed:
     container_name: myspeed
     restart: always
-    image: germannewsmaker/myspeed:latest@sha256:bd10935fc175bb1e09dc40e6e464bd0860105b38a2898015f2f441e92828932a
+    image: germannewsmaker/myspeed:latest@sha256:ae5e8f79c76dc695a6bab86cf9a0a6ab0dcf8ebf4e7018e04c47e5af0200c847
     ports:
       - "5216:5216"
     volumes:
@@ -54,7 +54,7 @@ services:
   nextcloud:
     container_name: nextcloud
     restart: always
-    image: nextcloud:latest@sha256:0b04a2e2c14672a2fe56ca668a633ed8fc9d2d882df83fdfc6114773f4713a74
+    image: nextcloud:latest@sha256:00a5983ec3353ed71df9c6df644a84c3d8a88ac7b93d8f591fdcbb5eaa8fb459
     ports:
       - "10081:80"
       - "10443:443"
@@ -64,7 +64,7 @@ services:
   syncthing:
     container_name: syncthing
     restart: always
-    image: linuxserver/syncthing:latest@sha256:318336e48804935c593bc30f69cade88c4cab2711aad11f7477822817fda6b18
+    image: linuxserver/syncthing:latest@sha256:ca52fb081d8f214d9b6195d45fd34ced2681630b7d41d05bcdff5dc4322d5b28
     ports:
       - "8384:8384"
       - "22000:22000"
@@ -115,7 +115,7 @@ services:
   # wireguard:
   #   container_name: wireguard
   #   restart: always
-  #   image: linuxserver/wireguard:latest@sha256:c6a04406c370722b09c6622d9b2f9877e778efcd32a350b08f0755b544c6fc07
+  #   image: linuxserver/wireguard:latest@sha256:0cf8a15e218f474b86fee7cfd40ec7a041a65733b825983db390b13ee988188e
   #   cap_add:
   #     - NET_ADMIN
   #     - SYS_MODULE
