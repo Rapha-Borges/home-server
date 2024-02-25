@@ -22,7 +22,7 @@ services:
   homeassistant:
     container_name: homeassistant
     restart: unless-stopped
-    image: ghcr.io/home-assistant/home-assistant:stable@sha256:05b068ca39334a7e86500416839f11a541f0fa16f8722133f5dc123971da996e
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:c4b82b1381732ac81cbedf51c80ae69a19e959197c15befd395b03a34b36483a
     ports:
       - "8123:8123"
     volumes:
@@ -64,7 +64,7 @@ services:
   syncthing:
     container_name: syncthing
     restart: always
-    image: linuxserver/syncthing:latest@sha256:ca52fb081d8f214d9b6195d45fd34ced2681630b7d41d05bcdff5dc4322d5b28
+    image: linuxserver/syncthing:latest@sha256:154fecdd76be7e175c83ff2553c27f2bbb2b5dc2c14f6e7a7d540f267b2c803f
     ports:
       - "8384:8384"
       - "22000:22000"
