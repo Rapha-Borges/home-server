@@ -3,7 +3,7 @@ services:
   pi-hole:
     container_name: pi-hole
     restart: always
-    image: pihole/pihole:latest@sha256:8077053835c2d2449041adad0c272d6e5fea3df91c5dfc3dae2bd950999c3118
+    image: pihole/pihole:latest@sha256:774f55647070106d20787a65beaa4354cbd455c59f734f239fde544abd679928
     ports:
       - "8053:53/tcp"
       - "8053:53/udp"
@@ -22,7 +22,7 @@ services:
   homeassistant:
     container_name: homeassistant
     restart: unless-stopped
-    image: ghcr.io/home-assistant/home-assistant:stable@sha256:c4b82b1381732ac81cbedf51c80ae69a19e959197c15befd395b03a34b36483a
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:221f67976a466544e9b9f2e6a8f51bcf1687e4800de602e0cf47bbcc5bdc5271
     ports:
       - "8123:8123"
     volumes:
