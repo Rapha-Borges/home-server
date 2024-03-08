@@ -22,7 +22,7 @@ services:
   homeassistant:
     container_name: homeassistant
     restart: unless-stopped
-    image: ghcr.io/home-assistant/home-assistant:stable@sha256:02304f6c5cdb817185e3a6f6db50aad97cf7206027c2a45fbf72da2d00588f4c
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:0471da64037a0d0c82b35af23fe632373324bac01decd3475921c2796f2a9968
     ports:
       - "8123:8123"
     volumes:
@@ -64,7 +64,7 @@ services:
   syncthing:
     container_name: syncthing
     restart: always
-    image: linuxserver/syncthing:latest@sha256:42bcfa747d8f1f63fddfc98ebc33a96f024dc7958aeebaba42fc1f0c5e64f886
+    image: linuxserver/syncthing:latest@sha256:0c51e27cceea087e50c3bf577dcee18727093b44bfed9a46b46bb6dd618ff718
     ports:
       - "8384:8384"
       - "22000:22000"
@@ -115,7 +115,7 @@ services:
   # wireguard:
   #   container_name: wireguard
   #   restart: always
-  #   image: linuxserver/wireguard:latest@sha256:e06473827e0dca55e1a8d58770933759e62cd21812390df7918074b2bcb3713e
+  #   image: linuxserver/wireguard:latest@sha256:d5779bb1027e606b896110c018afaf9a50691fdae1b8fdc6309999599d8e550e
   #   cap_add:
   #     - NET_ADMIN
   #     - SYS_MODULE
