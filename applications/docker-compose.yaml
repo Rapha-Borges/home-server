@@ -22,7 +22,7 @@ services:
   homeassistant:
     container_name: homeassistant
     restart: unless-stopped
-    image: ghcr.io/home-assistant/home-assistant:stable@sha256:0471da64037a0d0c82b35af23fe632373324bac01decd3475921c2796f2a9968
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:9dade9391001b769a791a03faf9f193a9c801e711922f0469d27a3d923b9dfe0
     ports:
       - "8123:8123"
     volumes:
@@ -103,7 +103,7 @@ services:
   # unbound:
   #   container_name: unbound
   #   restart: always
-  #   image: mvance/unbound:latest@sha256:706459e5fa356d63e3a25e5bc6e48f7c87273ce427877efe75ba33ca2efc61fc
+  #   image: mvance/unbound:latest@sha256:2b19bdb4db8d6f9ebd39d060e1a0ea66f198e5c7272c8b711fd7835594014385
   #   ports:
   #     - "53:53/tcp"
   #     - "53:53/udp"
@@ -115,7 +115,7 @@ services:
   # wireguard:
   #   container_name: wireguard
   #   restart: always
-  #   image: linuxserver/wireguard:latest@sha256:d5779bb1027e606b896110c018afaf9a50691fdae1b8fdc6309999599d8e550e
+  #   image: linuxserver/wireguard:latest@sha256:0a939e8b13d8ff379160e9a8ccc3def3694c58bf3775076e7b47bee543330d65
   #   cap_add:
   #     - NET_ADMIN
   #     - SYS_MODULE
