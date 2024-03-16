@@ -115,7 +115,7 @@ services:
   # wireguard:
   #   container_name: wireguard
   #   restart: always
-  #   image: linuxserver/wireguard:latest@sha256:0a939e8b13d8ff379160e9a8ccc3def3694c58bf3775076e7b47bee543330d65
+  #   image: linuxserver/wireguard:latest@sha256:478847e1a9f72fd181a8882b213350aee82c0351c685dec2b8d3a2f802ae0fab
   #   cap_add:
   #     - NET_ADMIN
   #     - SYS_MODULE
