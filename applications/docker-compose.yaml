@@ -54,7 +54,7 @@ services:
   nextcloud:
     container_name: nextcloud
     restart: always
-    image: nextcloud:latest@sha256:4aa8fdda6f280d3a3bc7786de33af3f27fdf00f158427672a962d010d4789064
+    image: nextcloud:latest@sha256:0bd1a360e2f9565bb2efe34f2b3e4de40f1a0c7551634893d845bcb14d406364
     ports:
       - "10081:80"
       - "10443:443"
