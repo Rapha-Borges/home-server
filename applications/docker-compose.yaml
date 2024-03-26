@@ -103,7 +103,7 @@ services:
   # unbound:
   #   container_name: unbound
   #   restart: always
-  #   image: mvance/unbound:latest@sha256:2b19bdb4db8d6f9ebd39d060e1a0ea66f198e5c7272c8b711fd7835594014385
+  #   image: mvance/unbound:latest@sha256:8e6cbf0485887c4c7581d522d61e0bcd9350f7ea16aa420f8b2fbfcccc957790
   #   ports:
   #     - "53:53/tcp"
   #     - "53:53/udp"
