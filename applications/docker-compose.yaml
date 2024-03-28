@@ -3,7 +3,7 @@ services:
   pi-hole:
     container_name: pi-hole
     restart: always
-    image: pihole/pihole:latest@sha256:774f55647070106d20787a65beaa4354cbd455c59f734f239fde544abd679928
+    image: pihole/pihole:latest@sha256:e3bb67ee283afee5fffd1d3ea8b95c4a2bf3aa445f955d4e5f3947d72904d580
     ports:
       - "8053:53/tcp"
       - "8053:53/udp"
