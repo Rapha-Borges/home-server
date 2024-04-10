@@ -54,7 +54,7 @@ services:
   nextcloud:
     container_name: nextcloud
     restart: always
-    image: nextcloud:latest@sha256:ee6e559f740416b8f34bd1dc8fc9a0f1c90d00800fdfba3b1d493e86ebecd5ae
+    image: nextcloud:latest@sha256:218b8ad1298f174531299ff23ce3e3864b1f3012511f3acc56a373f1abab7c66
     ports:
       - "10081:80"
       - "10443:443"
@@ -64,7 +64,7 @@ services:
   syncthing:
     container_name: syncthing
     restart: always
-    image: linuxserver/syncthing:latest@sha256:c026d7304f8d953a86116dd07a14527aba05be880371121f24ff8f930f929a17
+    image: linuxserver/syncthing:latest@sha256:5dff1bcae36d3daf5959915607033f77ad8400a09e2c7592e30fb9feb18a8709
     ports:
       - "8384:8384"
       - "22000:22000"
