@@ -22,7 +22,7 @@ services:
   homeassistant:
     container_name: homeassistant
     restart: unless-stopped
-    image: ghcr.io/home-assistant/home-assistant:stable@sha256:8d107df9537de0ccc3591d8a26fcdb0bb0e73f08b9ca8e83f45a2266ec9dbefc
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:4f86df601650c74b8689f1be033054ff09567db5dba5bf227ccc406ca4fa88d0
     ports:
       - "8123:8123"
     volumes:
@@ -54,7 +54,7 @@ services:
   nextcloud:
     container_name: nextcloud
     restart: always
-    image: nextcloud:latest@sha256:2dd52657a97dca0a2a306181a29207b4804561062c52f6c9e52b07c33b028fdb
+    image: nextcloud:latest@sha256:327c904e59aff2c50d52291b0984e5ebdcc381d41a46e004a4c5e78c21447b14
     ports:
       - "10081:80"
       - "10443:443"
