@@ -22,7 +22,7 @@ services:
   homeassistant:
     container_name: homeassistant
     restart: unless-stopped
-    image: ghcr.io/home-assistant/home-assistant:stable@sha256:4f86df601650c74b8689f1be033054ff09567db5dba5bf227ccc406ca4fa88d0
+    image: ghcr.io/home-assistant/home-assistant:stable@sha256:73b70d36610466a46f1ae3b890bc43f06b48a1ac98b4f28c5d52cf424e476cd5
     ports:
       - "8123:8123"
     volumes:
@@ -36,7 +36,7 @@ services:
   uptime-kuma:
     container_name: uptime-kuma
     restart: always
-    image: louislam/uptime-kuma:latest@sha256:bc6f244ecf277eeff6cc54262b724b693b386766c28fe78d7d5b9247d37907fd
+    image: louislam/uptime-kuma:latest@sha256:96510915e6be539b76bcba2e6873591c67aca8a6075ff09f5b4723ae47f333fc
     ports:
       - "3001:3001"
     volumes:
@@ -54,7 +54,7 @@ services:
   nextcloud:
     container_name: nextcloud
     restart: always
-    image: nextcloud:latest@sha256:327c904e59aff2c50d52291b0984e5ebdcc381d41a46e004a4c5e78c21447b14
+    image: nextcloud:latest@sha256:213f65aca230810ed0a6fc9af0bb3f1db0b5851a36a4488b9a60f7c9ac181c39
     ports:
       - "10081:80"
       - "10443:443"
@@ -64,7 +64,7 @@ services:
   syncthing:
     container_name: syncthing
     restart: always
-    image: linuxserver/syncthing:latest@sha256:5dff1bcae36d3daf5959915607033f77ad8400a09e2c7592e30fb9feb18a8709
+    image: linuxserver/syncthing:latest@sha256:0f69786427f711e506fefd6eb66645817dbf99c91b7d37860158bb504e63f756
     ports:
       - "8384:8384"
       - "22000:22000"
@@ -103,7 +103,7 @@ services:
   # unbound:
   #   container_name: unbound
   #   restart: always
-  #   image: mvance/unbound:latest@sha256:8e6cbf0485887c4c7581d522d61e0bcd9350f7ea16aa420f8b2fbfcccc957790
+  #   image: mvance/unbound:latest@sha256:ce784226f73ccfabf18ba81bf88f549b638c29465f1e7fd1517ca3e063fa165a
   #   ports:
   #     - "53:53/tcp"
   #     - "53:53/udp"
